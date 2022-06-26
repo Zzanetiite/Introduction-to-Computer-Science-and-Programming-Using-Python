@@ -120,17 +120,16 @@ def factorial_test (n):
 factorial_test (5)
 """
 """
-#Must be iterative not recursive
-def iterPower(base, exp):
-    basex = 1
-    for i in range (1, exp + 1) :
-        print(i)
-        basex *= base
-    return basex
+def recurPower(base, exp):
+    if exp == 0 :
+        return 1
+    if exp == 1 :
+        return base
+    else :
+        return (base * (recurPower(base,(exp-1))))
+print(recurPower(2, 6))
 
-print(iterPower(2, 6))
-"""
-"""
+
 def iterPower(base, exp):
     result = 1
     while exp > 0:
@@ -139,5 +138,65 @@ def iterPower(base, exp):
     return result
 
 print(iterPower(2, 6))
+
 """
+"""
+# Hanoi Towers break down.
+def printMove(fr, to) :
+    print('move from ' + str(fr) + ' to ' + str(to))
+
+# n - the amount of disks to be moved
+# fr - stick disk is to be moved from
+# to - stick disk is to be moved to
+# spare - the free stick   
+def Towers(n, fr, to, spare, branch) :
+    print(n,fr,to,spare, branch)
+    if n == 1 :
+        printMove(fr, to)
+    else :
+        Towers(n-1, fr, spare, to, 1)
+        Towers(1, fr, to, spare, 2)
+        Towers(n-1, spare, to, fr, 3)
+        print('next')
+        
+print(Towers(4, 'A', 'B', 'C', 'Mother')) 
+
+"""
+
+import math
+
+def polysum(n, s):
+    area=0.25*n*s**2/math.tan(math.pi/n)
+    perimeter=n*s
+    return round(area+perimeter**2,4)
+
+print(polysum(9, 60)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
+
+
