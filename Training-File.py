@@ -2,7 +2,7 @@
 """
 Spyder Editor
 
-This is a temporary script file.
+This is a temporary script file / dump file.
 """
 """
 
@@ -162,20 +162,20 @@ def Towers(n, fr, to, spare, branch) :
 print(Towers(4, 'A', 'B', 'C', 'Mother')) 
 
 """
+"""
+testList = [1, -4, 8, -9]
 
+def timesFive(a):
+    return abs(a)*abs(a)
 
+def applyToEach(L, f):
+    for i in range(len(L)):
+        L[i] = f(L[i])
+        
+applyToEach(testList, timesFive)
 
-
-
-
-
-
-
-
-
-
-
-
+print(testList)
+"""
 
 
 
