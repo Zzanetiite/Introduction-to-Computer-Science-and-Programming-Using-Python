@@ -176,6 +176,35 @@ applyToEach(testList, timesFive)
 
 print(testList)
 """
+"""
+animals = {'a': 'aardvark', 'b': 'baboon', 'c': 'coati'}
+
+animals['d'] = 'donkey'
+
+animals['a'] = 'anteater'
+
+print('baboon' in animals)
+
+print(animals.values())
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
